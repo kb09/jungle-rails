@@ -9,8 +9,8 @@ RSpec.describe User, type: :model do
     end
 
     it 'Passwords must be present' do
-      user = User.new(password: '111222', password_confirmation: '111222')
-      expect(user).to be_valid
+      user = User.new(password: nil , password_confirmation: nil )
+      expect(user).to_not be_valid
     end
 
     it 'Emails must be unique' do
